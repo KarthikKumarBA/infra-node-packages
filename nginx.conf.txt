@@ -11,4 +11,30 @@ server {
         location = /50x.html {
                 root /usr/share/nginx/html;
         }
+        location /api {
+                proxy_pass localhost:8081;
+        }
+
 }   
+
+cat << 'EOF' > /etc/nginx/conf.d/nginx.conf
+server {
+        listen   80;
+        server_name localhost;
+
+        location / {
+                root /usr/share/nginx/html;
+                index index.html index.htm;
+                try_files $uri /index.html;
+        }
+        error_page 500 502 503 504 /50x.html;
+        location = /50x.html {
+                root /usr/share/nginx/html;
+        }
+        location /api {
+                proxy_pass http://localhost:8081;
+        }
+
+}   
+
+EOF
