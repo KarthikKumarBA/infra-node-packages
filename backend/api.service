@@ -3,7 +3,7 @@ Description=My Node.js Application
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/node /home/ec2-user/myapp/dist/server.js
+ExecStart=/usr/bin/node /home/ec2-user/myapp/backend/server.js
 WorkingDirectory=/home/ec2-user/myapp
 Restart=always
 User=ec2-user
