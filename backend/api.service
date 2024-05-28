@@ -1,6 +1,5 @@
 [Unit]
 Description=My Node.js Application
-After=network.target
 
 [Service]
 ExecStart=/usr/bin/node /home/ec2-user/myapp/backend/server.js
@@ -8,8 +7,6 @@ WorkingDirectory=/home/ec2-user/myapp
 Restart=always
 User=ec2-user
 Group=ec2-user
-Environment=PATH=/usr/bin:/usr/local/bin
-Environment=NODE_ENV=production
 Environment=DB_HOST=localhost
 Environment=DB_USER=admin
 Environment=DB_PASSWORD=Admin@123

@@ -38,3 +38,15 @@ server {
 }   
 
 EOF
+
+
+mysql -h terraform-20240528073140236600000003.chqccw2qetsc.ap-south-1.rds.amazonaws.com -u admin -padmin#123 -P 3306
+
+create database signup;
+use signup;
+create table login(id INT NOT NULL AUTO_INCREMENT,name VARCHAR(20),email VARCHAR(20),password VARCHAR(20), PRIMARY KEY(id));
+
+
+
+mysql -h terraform-20240528153845298000000003.chqccw2qetsc.ap-south-1.rds.amazonaws.com -u admin -padmin#123 -P 3306 -e "create database signup; use signup; create table login(id INT NOT NULL AUTO_INCREMENT,name VARCHAR(20),email VARCHAR(20),password VARCHAR(20), PRIMARY KEY(id));
+"

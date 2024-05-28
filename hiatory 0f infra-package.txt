@@ -1,0 +1,44 @@
+
+    2  sudo systemctl restart api
+    3  sudo systemctl status api
+
+    7  vi /etc/systemd/system/api.service 
+
+
+  
+   44  chmod 755 /home/ec2-user/myapp/react-login/backend/node_modules/.bin/nodemon
+
+   55  npm install express
+   56  sudo npm install -g express
+
+   62  npm install mysql12
+   64  sudo npm install -g mysql12
+
+   66  npm i -g express-mysql-session
+   67  sudo npm i -g express-mysql-session
+
+   78  npm install cors --save
+   79  sudo npm install -g cors --save
+
+
+   88  sudo npm install -g dotenv --save
+
+
+  105  cd infra-node-packages/
+
+  109  cd myapp/
+
+  112  cd infra-node-packages/
+
+
+  116  sudo cp -r frontend/* /usr/share/nginx/html/
+  144  sudo /etc/nginx/conf.d/nginx.conf
+
+
+  156  cp -r backend/* /home/ec2-user/myapp/backend/
+
+  167  sudo cp -r frontend/* /usr/share/nginx/html/
+  168  cp -r backend/* /home/ec2-user/myapp/backend/
+
+echo 'export REACT_APP_API_BASE_URL=http://bakarthikkumar.com/api' >> ~/.bashrc
+source ~/.bashrc
